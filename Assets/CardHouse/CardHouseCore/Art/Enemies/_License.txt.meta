@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 11b87434a89e2bf4e9bb0dea602e22e9
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264045
+  packageName: CardHouse
+  packageVersion: 1.0.4
+  assetPath: Assets/CardHouse/CardHouseCore/Art/Enemies/_License.txt
+  uploadId: 609594

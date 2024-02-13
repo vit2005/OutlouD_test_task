@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d51197aab3430904587815845f7b966f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264045
+  packageName: CardHouse
+  packageVersion: 1.0.4
+  assetPath: Assets/CardHouse/CardHouseCore/Art/Resource_Icons/Gems/License.txt
+  uploadId: 609594

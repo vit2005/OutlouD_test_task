@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c0182800469abed4baf7d577013de60c
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264045
+  packageName: CardHouse
+  packageVersion: 1.0.4
+  assetPath: Assets/CardHouse/CardHouseCore/Art/Resource_Icons/ShortSword/_License.txt
+  uploadId: 609594

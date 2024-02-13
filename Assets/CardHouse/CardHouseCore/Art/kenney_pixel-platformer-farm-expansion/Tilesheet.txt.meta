@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aaea2aed70782c84aaa455f6d7771db8
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264045
+  packageName: CardHouse
+  packageVersion: 1.0.4
+  assetPath: Assets/CardHouse/CardHouseCore/Art/kenney_pixel-platformer-farm-expansion/Tilesheet.txt
+  uploadId: 609594

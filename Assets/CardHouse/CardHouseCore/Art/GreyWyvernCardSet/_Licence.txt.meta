@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2da63f22048e6d04c83d79f96da34421
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264045
+  packageName: CardHouse
+  packageVersion: 1.0.4
+  assetPath: Assets/CardHouse/CardHouseCore/Art/GreyWyvernCardSet/_Licence.txt
+  uploadId: 609594

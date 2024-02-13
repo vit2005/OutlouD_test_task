@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 090aa8c3a4b02bf46be425ab97b0daf5
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264045
+  packageName: CardHouse
+  packageVersion: 1.0.4
+  assetPath: Assets/CardHouse/CardHouseCore/Art/Animals/_License.txt
+  uploadId: 609594

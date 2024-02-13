@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b93d952094d0c2344b3e9dd17711e17e
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264045
+  packageName: CardHouse
+  packageVersion: 1.0.4
+  assetPath: Assets/CardHouse/CardHouseCore/Art/UI_Pack/_License.txt
+  uploadId: 609594

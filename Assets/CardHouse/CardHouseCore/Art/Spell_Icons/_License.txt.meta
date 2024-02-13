@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3c3768756b21d984da8ea68b3ab4e830
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264045
+  packageName: CardHouse
+  packageVersion: 1.0.4
+  assetPath: Assets/CardHouse/CardHouseCore/Art/Spell_Icons/_License.txt
+  uploadId: 609594

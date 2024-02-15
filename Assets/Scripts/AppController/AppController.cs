@@ -15,6 +15,9 @@ public class AppController : MonoBehaviour
     [SerializeField] private Camera _camera;
     public Camera Camera => _camera;
 
+    [SerializeField] private AppControllerSounds _sound;
+    public AppControllerSounds sound => _sound;
+
     [Inject] AppControllerStorage _storage;
     public AppControllerStorage storage => _storage;
 
@@ -25,5 +28,6 @@ public class AppController : MonoBehaviour
         _modes.SetGameMode(GameModeId.PRELOAD);
         _input.Init();
         _storage.Init();
+        _sound.Init();
     }
 }

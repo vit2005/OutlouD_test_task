@@ -34,6 +34,7 @@ public class AppControllerModes : MonoBehaviour
         CurrentMode = _gameModes[modeId];
         SetCamera(modeId);
         CurrentMode.OnEnter();
+        AppController.Instance.sound.Whoosh();
     }
 
     public void SetCamera(GameModeId modeId)

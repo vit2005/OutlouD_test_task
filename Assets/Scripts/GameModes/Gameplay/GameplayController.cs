@@ -132,6 +132,7 @@ public class GameplayController : MonoBehaviour
     {
         timer.StopTimer();
         _appControllerStorage.SaveLevel(timer.remainingTime);
+        AppController.Instance.sound.PlayVictory();
         yield return new WaitForSeconds(1f);
         GravityFallCards();
         yield return new WaitForSeconds(2f);
@@ -140,6 +141,7 @@ public class GameplayController : MonoBehaviour
 
     private IEnumerator DefeatScenario()
     {
+        AppController.Instance.sound.PlayDefeat();
         yield return new WaitForSeconds(1f);
         GravityFallCards();
         yield return new WaitForSeconds(2f);

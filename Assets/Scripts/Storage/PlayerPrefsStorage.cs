@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class PlayerPrefsStorage : IStorage
 {
-    public void Load()
+    string databaseKey = "database";
+
+    public Database Load()
     {
-        throw new System.NotImplementedException();
+        Database database = new Database();
+        if (PlayerPrefs.HasKey(databaseKey))
+        {
+            database = JsonUtility.FromJson<Database>(PlayerPrefs.GetString(databaseKey));
+        }
+        else
+        {
+            Save(database);
+        }
+
+        return database;
     }
 
-    public void Save()
+    public void Save(Database database)
     {
-        throw new System.NotImplementedException();
+        PlayerPrefs.SetString(databaseKey, JsonUtility.ToJson(database));
     }
 }

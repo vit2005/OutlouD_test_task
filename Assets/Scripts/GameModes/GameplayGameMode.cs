@@ -5,18 +5,20 @@ using Zenject;
 
 public class GameplayGameMode : GameModeBase
 {
-    private GameplayController controller;
+    private GameplayController _controller;
+    private AppControllerStorage _storage;
     public override GameModeId id => GameModeId.GAMEPLAY;
 
     public override void Init()
     {
-        controller = AppController.Instance.transform.GetComponentInChildren<GameplayController>(true); ;
+        _controller = AppController.Instance.transform.GetComponentInChildren<GameplayController>(true);
+        _storage = AppController.Instance.storage;
     }
 
     public override void OnEnter()
     {
-        controller.InitTable(4);
-        AppController.Instance.input.Click += controller.OnClick;
+        _controller.InitTable((_storage.GetLevel()+1)*2);
+        AppController.Instance.input.Click += _controller.OnClick;
         AppController.Instance.input.Escape += OnEscape;
     }
 
@@ -27,8 +29,8 @@ public class GameplayGameMode : GameModeBase
 
     public override void OnExit()
     {
-        controller.OnExit();
-        AppController.Instance.input.Click -= controller.OnClick;
+        _controller.OnExit();
+        AppController.Instance.input.Click -= _controller.OnClick;
         AppController.Instance.input.Escape -= OnEscape;
     }
 }

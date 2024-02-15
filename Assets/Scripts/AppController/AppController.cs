@@ -15,16 +15,15 @@ public class AppController : MonoBehaviour
     [SerializeField] private Camera _camera;
     public Camera Camera => _camera;
 
+    [Inject] AppControllerStorage _storage;
+    public AppControllerStorage storage => _storage;
+
     public void Awake()
     {
         Instance = this;
         _modes.Init();
         _modes.SetGameMode(GameModeId.PRELOAD);
         _input.Init();
-    }
-
-    public void Start()
-    {
-
+        _storage.Init();
     }
 }

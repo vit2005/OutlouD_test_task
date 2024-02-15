@@ -7,32 +7,33 @@ using UnityEngine;
 public class CountdownTimer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
-    private float remainingTime;
-    private Coroutine coroutine;
+    private float _remainingTime;
+    public float remainingTime => _remainingTime;
+    private Coroutine _coroutine;
     public Action timeOut;
 
     public void Init(float totalTime)
     {
-        remainingTime = totalTime;
+        _remainingTime = totalTime;
         SetTimeVisual();
     }
 
     public void StartTimer()
     {
-        coroutine = StartCoroutine(UpdateTimer());
+        _coroutine = StartCoroutine(UpdateTimer());
     }
 
     public void StopTimer()
     {
-        StopCoroutine(coroutine);
+        StopCoroutine(_coroutine);
         //timerText.text = "00:00";
     }
 
     IEnumerator UpdateTimer()
     {
-        while (remainingTime > 0)
+        while (_remainingTime > 0)
         {
-            remainingTime -= Time.deltaTime;
+            _remainingTime -= Time.deltaTime;
             SetTimeVisual();
             yield return null;
         }
@@ -43,8 +44,8 @@ public class CountdownTimer : MonoBehaviour
 
     private void SetTimeVisual()
     {
-        int seconds = Mathf.Max((int)remainingTime, 0);
-        int milliseconds = Mathf.Max((int)((remainingTime - seconds) * 100), 0);
+        int seconds = Mathf.Max((int)_remainingTime, 0);
+        int milliseconds = Mathf.Max((int)((_remainingTime - seconds) * 100), 0);
 
         timerText.text = string.Format("{0:D2}:{1:D2}", seconds, milliseconds);
     }

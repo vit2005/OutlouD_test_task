@@ -1,16 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class JSONStorage : IStorage
 {
-    public void Load()
+    string fileLocation = Application.persistentDataPath + "/database.json";
+
+    public Database Load()
     {
-        throw new System.NotImplementedException();
+        Database database = new Database();
+        if (File.Exists(fileLocation))
+        {
+            string loadedFileString = File.ReadAllText(fileLocation);
+            database = JsonUtility.FromJson<Database>(loadedFileString);
+        }
+        else
+        {
+            Save(database);
+        }
+
+        return database;
     }
 
-    public void Save()
+    public void Save(Database database)
     {
-        throw new System.NotImplementedException();
+        File.WriteAllText(fileLocation, JsonUtility.ToJson(database));
     }
 }

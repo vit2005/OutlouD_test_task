@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IStorage
 {
-    void Save();
-    void Load();
+    void Save(Database database);
+    Database Load();
 }

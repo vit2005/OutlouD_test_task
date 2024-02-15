@@ -16,6 +16,7 @@ public class GameplayController : MonoBehaviour
     [SerializeField] Button shuffleButton;
 
     [Inject] private TableGenerator _tableGenerator;
+    [Inject] private AppControllerStorage _appControllerStorage;
 
     private List<GameObject> _cardsInstances = new List<GameObject>();
     private List<Card> _cards = new List<Card>();
@@ -23,7 +24,7 @@ public class GameplayController : MonoBehaviour
     private bool _openingLocked = true;
 
     private const float ANIMATION_DURATION = 2f;
-    private const float CARDS_TIME_MULTIPLIER = 10f;
+    private const float CARDS_TIME_MULTIPLIER = 5f;
 
     public void InitTable(int count)
     {
@@ -130,6 +131,7 @@ public class GameplayController : MonoBehaviour
     private IEnumerator VictoryScenario()
     {
         timer.StopTimer();
+        _appControllerStorage.SaveLevel(timer.remainingTime);
         yield return new WaitForSeconds(1f);
         GravityFallCards();
         yield return new WaitForSeconds(2f);

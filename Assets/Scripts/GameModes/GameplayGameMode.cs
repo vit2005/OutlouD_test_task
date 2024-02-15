@@ -15,7 +15,7 @@ public class GameplayGameMode : GameModeBase
 
     public override void OnEnter()
     {
-        controller.InitTable(2);
+        controller.InitTable(4);
         AppController.Instance.input.Click += controller.OnClick;
         AppController.Instance.input.Escape += OnEscape;
     }
@@ -27,7 +27,7 @@ public class GameplayGameMode : GameModeBase
 
     public override void OnExit()
     {
-        controller.ClearTable();
+        controller.OnExit();
         AppController.Instance.input.Click -= controller.OnClick;
         AppController.Instance.input.Escape -= OnEscape;
     }

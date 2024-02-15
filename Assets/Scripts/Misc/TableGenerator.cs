@@ -16,12 +16,12 @@ public class TableGenerator
         int columns = count / rows;
 
         // Calculate the total width and height of the card table
-        float totalWidth = columns * horizontalPadding;
-        float totalHeight = rows * verticalPadding;
+        float totalWidth = (float)columns * horizontalPadding;
+        float totalHeight = (float)rows * verticalPadding;
 
         // Calculate the starting position
         float startX = -totalWidth / 2f + horizontalPadding / 2f;
-        float startY = totalHeight / 2f - verticalPadding / 2f;
+        float startY = -totalHeight / 2f + verticalPadding / 2f;
 
         // Generate spawn points
         for (int row = 0; row < rows; row++)

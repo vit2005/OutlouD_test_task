@@ -25,4 +25,4 @@ URP config in the root folder.
 
 Assets/plugins used: Cinemachine, Universal RP, TextMeshPro, Zenject, Input System. 
 Art from CardHouse: https://assetstore.unity.com/packages/tools/game-toolkits/cardhouse-264045
-Sounds from: sonniss.com
+Sounds from: https://sonniss.com/gameaudiogdc

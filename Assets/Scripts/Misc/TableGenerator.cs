@@ -11,19 +11,20 @@ public class TableGenerator
     {
         List<Vector2> points = new List<Vector2>();
 
-        // Calculate the number of rows and columns
         int rows = (int)Mathf.Sqrt(count);
         int columns = count / rows;
+        if (rows * columns < count)
+        {
+            rows -= rows % 2;
+            columns = count / rows;
+        }
 
-        // Calculate the total width and height of the card table
         float totalWidth = (float)columns * horizontalPadding;
         float totalHeight = (float)rows * verticalPadding;
 
-        // Calculate the starting position
         float startX = -totalWidth / 2f + horizontalPadding / 2f;
         float startY = -totalHeight / 2f + verticalPadding / 2f;
 
-        // Generate spawn points
         for (int row = 0; row < rows; row++)
         {
             for (int col = 0; col < columns; col++)

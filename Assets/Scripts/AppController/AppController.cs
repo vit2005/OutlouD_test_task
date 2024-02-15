@@ -21,6 +21,9 @@ public class AppController : MonoBehaviour
     [Inject] AppControllerStorage _storage;
     public AppControllerStorage storage => _storage;
 
+    [SerializeField] AppControllerVFX _vfx;
+    public AppControllerVFX vfx => _vfx;
+
     public void Awake()
     {
         Instance = this;
@@ -29,5 +32,6 @@ public class AppController : MonoBehaviour
         _input.Init();
         _storage.Init();
         _sound.Init();
+        _vfx.Init();
     }
 }

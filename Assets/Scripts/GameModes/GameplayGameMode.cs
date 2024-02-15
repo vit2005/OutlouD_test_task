@@ -27,6 +27,11 @@ public class GameplayGameMode : GameModeBase
         AppController.Instance.modes.SetGameMode(GameModeId.MENU);
     }
 
+    public override void OnUpdate()
+    {
+        _controller.OnUpdate();
+    }
+
     public override void OnExit()
     {
         _controller.OnExit();

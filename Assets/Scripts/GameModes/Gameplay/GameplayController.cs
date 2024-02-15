@@ -114,6 +114,8 @@ public class GameplayController : MonoBehaviour
         StartCoroutine(CloseAll(cards));
     }
 
+    #region Win-Lose
+
     private void CheckVictory()
     {
         if (_cards.All(x => x.isOpen))
@@ -158,6 +160,21 @@ public class GameplayController : MonoBehaviour
         }
     }
 
+    #endregion
+
+    public void OnUpdate()
+    {
+        if (timer.remainingTime > 0)
+        {
+            if (timer.remainingTime < 5f)
+                AppController.Instance.vfx.SetVignette((5f - timer.remainingTime)/5f);
+        }
+        else
+        {
+            AppController.Instance.vfx.SetVignette(0f);
+        }
+    }
+
     public void OnExit()
     {
         timer.StopTimer();
@@ -168,6 +185,6 @@ public class GameplayController : MonoBehaviour
         }
         _cardsInstances.Clear();
         _cards.Clear();
-
+        AppController.Instance.vfx.SetVignette(0f);
     }
 }

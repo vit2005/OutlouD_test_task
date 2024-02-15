@@ -942,7 +942,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2268,7 +2268,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2382,6 +2382,7 @@ GameObject:
   - component: {fileID: 932476739}
   - component: {fileID: 932476740}
   - component: {fileID: 932476741}
+  - component: {fileID: 932476742}
   m_Layer: 0
   m_Name: AppController
   m_TagString: Untagged
@@ -2405,6 +2406,7 @@ MonoBehaviour:
   _input: {fileID: 932476740}
   _camera: {fileID: 963194227}
   _sound: {fileID: 932476741}
+  _vfx: {fileID: 932476742}
 --- !u!4 &932476736
 Transform:
   m_ObjectHideFlags: 0
@@ -2519,11 +2521,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0467ae35cb445c6418b671b54da61e99, type: 3}
   - {fileID: 8300000, guid: 490879a423d4c10459cc8d1da95e83c4, type: 3}
   whoosh:
-  - {fileID: 8300000, guid: 1a961499c3cf8914c8a8f16e706fcd44, type: 3}
+  - {fileID: 8300000, guid: 14cb48da8713abb4aa231e378d72abf5, type: 3}
   - {fileID: 8300000, guid: 3a2682960236f5944851e6fb4bede2d7, type: 3}
   - {fileID: 8300000, guid: bdd21b8dccf64c542950ef16658e9914, type: 3}
   victory: {fileID: 8300000, guid: 447ef46063b193848b2e127161a66283, type: 3}
   defeat: {fileID: 8300000, guid: beeb3ad8b0d63404c95e987a3bca6f5b, type: 3}
+--- !u!114 &932476742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932476734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc0e24eb3fbcd24780b150127e8e22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 2086207687}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

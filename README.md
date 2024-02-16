@@ -8,6 +8,9 @@ Part two: write a storage system for game options. It should allow for various s
 The storage should be able to save in JSON, player prefs, and binary.
 It's preferable to use Zenject: Dependency Injection.
 
+WebGL build:
+https://vit2005.itch.io/outloud-test-task
+
 Brief description:
 The application contains the main AppController (singleton) and other separated controllers (a few of them are MonoBehaviours and one injected by Zenject). 
 
